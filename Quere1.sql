@@ -29,3 +29,19 @@ create table TBL_TOPIC
     boardId int not null,
 	foreign key(userId) references TBL_USER(userId)
 );
+alter table TBL_TOPIC add foreign key(boardId) references TBL_BOARD(boardId);
+
+create table TBL_REPLY
+(
+	replyId int not null primary key,
+    tiele varchar(50) not null,
+    content varchar(1000) not null,
+    publishTime datetime not null,
+    modifyTime datetime not null,
+    userId int not null,
+    topicId int not null,
+    foreign key(userId) references TBL_USER(userId),
+    foreign key(topicId) references TBL_TOPIC(topicId)
+
+)
+
