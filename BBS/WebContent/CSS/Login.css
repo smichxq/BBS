@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+.d1-container{
+	position: absolute;
+	display: -webkit-flex;
+	display: flex;
+	background-color: aliceblue;
+	width: 400px;
+	height: 200px;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-95%);
+	border-style:ridge;
+	border-color:#D6E4F8;
+}
+
+.d2-container{
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	width: 90%;
+	height: 90%;
+	top: 20%;
+	left: 20%;
+	
+	
+}
+
+.d1-inner-form-container{
+	position:relative;
+	width: 70%;
+	height:50%;
+
+}
+
+#input-item-us{
+	position:relative;
+	left:25%;
+	top:-43%;
+	width:50%;
+	
+}
+
+#input-item-pw{
+	position:relative;
+	left:25%;
+	top:-66%;
+	width:50%;
+}
+
+#pw{
+	position:relative;
+	top:-23%;
+	left:2%;
+}
+#sub{
+	position:relative;
+	left:-45%;
+}
+#res{
+	position:relative;
+	left:-15%;
+}
+	
+
+
