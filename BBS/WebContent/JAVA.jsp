@@ -9,7 +9,10 @@
 </head>
 <body>
 <%@ include file = "Head.jsp" %>
-<h1>JAVA</h1>
+<%for(int i = 0; i<10; i++){ %>
+	<%@ include file = "Board.jsp" %>
+	<br>
+	<%} %>
 
 </body>
 </html>

@@ -66,5 +66,9 @@ public class Topic {
 	public void setBoardId(int boardId) {
 		this.boardId = boardId;
 	}
+	@Override
+	public String toString() {
+		return this.boardId +"  " + this.content +"  " + this.title  +"  "+ this.topicId  +"  "+ this.userId  +"  "+ this.modifyTime +"  " + this.publishTime;
+	}
 
 }

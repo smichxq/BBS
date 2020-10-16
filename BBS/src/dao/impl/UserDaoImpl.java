@@ -10,7 +10,12 @@ import dao.impl.BaseDao;
 import entity.User;
 
 public class UserDaoImpl implements UserDao {
-	BaseDao bd = new BaseDao();
+	BaseDao bd = null;
+	
+	public UserDaoImpl() {
+		// TODO Auto-generated constructor stub
+		bd = new BaseDao();
+	}
 
 	@Override
 	public User findUser(String userName) {

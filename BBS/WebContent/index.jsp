@@ -10,7 +10,6 @@
 
 <%@ include file = "Head.jsp" %>
 
-<div id="d5"></div>
 
 <script type="text/javascript">
 

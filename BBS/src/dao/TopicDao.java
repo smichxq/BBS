@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import entity.Topic;
@@ -16,15 +17,19 @@ public interface TopicDao {
 	 * @param page
 	 * @param boardId
 	 * @return
+	 * @throws SQLException 
+	 * @throws ClassNotFoundException 
 	 */
-	public List<Topic> findListTopic(int page,int boardId);
+	public List<Topic> findListTopic(int page,int boardId) throws ClassNotFoundException, SQLException;
 	
 	/**
 	 * 添加主题
 	 * @param topic
 	 * @return
+	 * @throws SQLException 
+	 * @throws ClassNotFoundException 
 	 */
-	public int addTopic(Topic topic); 
+	public int addTopic(Topic topic) throws ClassNotFoundException, SQLException; 
 		
 	/**
 	 * 更新主题
