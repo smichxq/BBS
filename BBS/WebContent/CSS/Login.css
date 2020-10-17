@@ -4,14 +4,14 @@
 	position: absolute;
 	display: -webkit-flex;
 	display: flex;
-	background-color: aliceblue;
+	background-color: #f5f6f2;
 	width: 400px;
 	height: 200px;
 	top:50%;
 	left: 50%;
 	transform: translate(-50%,-95%);
 	border-style:ridge;
-	border-color:#D6E4F8;
+	border-color:#e7e6dc;
 }
 
 .d2-container{

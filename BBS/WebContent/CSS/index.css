@@ -2,22 +2,14 @@
 /* CSS Document */
 
 #d1 {
-    background-color: rgba(229,237,237,1);
-    text-align: center;
-    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-    font-size: larger;
-	margin-left:auto;
-	margin-right:auto;
-	width: 60%;
-	border-style:groove;
-	border-color:#BBBED2;
+
 
 	
 	}
 
 
 	.d2{
-		position:relative
+		position:relative;
 		background-color: aquamarine;
 		width: 60px;
 		height: 30px;
@@ -26,7 +18,7 @@
 
 	}
 	.d3{
-		position:relative;
+		position:absolute;
 		display: -webkit-flex;
 		display: flex;
 		width: 1520px;
@@ -35,10 +27,7 @@
 		justify-content: space-around;
 		align-items: center;
 		border-style:double;
-		left:10%;
-		
-		
-		
+		top:229px;
 
 	}
 	.d4{

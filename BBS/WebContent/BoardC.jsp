@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="CSS/Board.css" type="text/css" rel="stylesheet"/>
+<link href="CSS/BoardC.css" type="text/css" rel="stylesheet"/>
 <meta charset="UTF-8">
 <title>BBS</title>
 </head>
@@ -11,17 +11,17 @@
 <!-- 主题框架 -->
 <div class="d1-board">
 <!-- 回复数 -->
-	<div class="d1-replyCount">
+	<div id="d1-replyCount">
 	
-		<div class ="d1-inner-reply">
+		<div id ="d1-inner-reply">
 			121
 		</div>
 		
 	</div>
 	
 	<!-- 主题内容 -->
-	<div class="d1-topic-container">
-		<div class="topic">
+	<div id="d1-topic-container">
+		<div id="topic">
 		Test!1
 		</div>
 	
@@ -31,22 +31,22 @@
 
 		
 		<!-- 楼主-->
-		<div class = "d2-master">
+		<div id = "d2-master">
 		smithxq
 		</div>
 		<!-- 发布时间 -->
-		<div class = "d2-master-date">
+		<div id = "d2-master-date">
 		</div>
 		
 		<!-- 最后回贴-->
-		<div class = "d2-reply">
+		<div id = "d2-reply">
 		2020.10.16		
 		</div>
 		<!-- 回贴时间 -->
-		<div class = "d2-reply-date">
+		<div id = "d2-reply-date">
 		</div>
+		
 </div>
-
 
 
 
