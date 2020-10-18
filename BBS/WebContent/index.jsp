@@ -6,9 +6,13 @@
 <meta charset="UTF-8">
 <title>BBS</title>
 </head>
-<body>
+<body style="background-color:#ffffff;">
+<jsp:include page = "Head.jsp" />
 
-<%@ include file = "Head.jsp" %>
+<%for(int i = 0; i<10; i++){ %>
+		<jsp:include page = "Board.jsp" />
+		<br>
+		<%} %>
 
 
 <script type="text/javascript">
@@ -19,9 +23,6 @@
 		var f = document.getElementById("d5");
 		f.appendChild(h);
 		f.appendChild(d);
-	}
-	for(i=0;i<20;i++){
-		add();
 	}
 
 </script>

@@ -4,34 +4,42 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="CSS/index.css" type="text/css" rel="stylesheet"/>
+<link href="CSS/Head.css" type="text/css" rel="stylesheet"/>
 <title>Insert title here</title>
 </head>
 <body>
-<div id="d1">
-  <h1>BBS</h1>
+<div id="d1-head">
+	<h1 id="d1-title">BBS</h1>
 </div>
 
-<div class="d3">
+<div class="d3-navigate">
 
-		<div class="d2">
-		  <a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">JAVA</a>
-
-		</div>
-		<div class="d2">
-			<a href="NET.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">NET</a>
+		<button class="d2-head1">JAVA
+			<div class="drop-content">
+			  	<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">java</a>
+			  	<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">jsp</a>
+			  	<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">servlet</a>
+			  	<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">Eclipse</a>
+			</div>
+		</button>
+		<button class="d2-head1">NET
+		<div class="drop-content">
+				<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">NET</a>
+			  	<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">C#</a>
+			  	<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">WinForms</a>
+			  	<a href="JAVA.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;">ADO.NET</a>
 
 			</div>
-		<div class="d2">
+			</button>
+		<div class="d2-head">
 			<a href="index.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal; font-size: 16px;">其他</a>
 
 	</div>
     
 </div>
-<div class="d4">
-	<a id="a1" href="Login.jsp">登录</a>
-	<a id="a2" href="Regist.jsp">注册</a>
-	
+<div class="d4-head">
+	<a id="a1-head" href="Login.jsp">登录</a>
+	<a id="a2-head" href="Regist.jsp">注册</a>
 	</div>
 
 </body>

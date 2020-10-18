@@ -1,6 +1,9 @@
 package entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 
 public class User {
 	private int userId;
@@ -61,7 +64,8 @@ public class User {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return head + userId + userName;
+		return this.head +" "+ this.userId  +" "+this.userName+" " + this.userPass +" "+ this.gender+" " 
+				+ new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(this.regTime);
 	}
 
 }

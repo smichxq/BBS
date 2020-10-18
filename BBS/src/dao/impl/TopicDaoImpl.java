@@ -11,11 +11,11 @@ import dao.TopicDao;
 import entity.Topic;
 
 public class TopicDaoImpl extends BaseDao implements TopicDao{
-//	BaseDao bd = null;
+
 	
 	public TopicDaoImpl() {
 		// TODO Auto-generated constructor stub
-//		bd = new BaseDao();
+
 	}
 
 	@Override
@@ -28,7 +28,6 @@ public class TopicDaoImpl extends BaseDao implements TopicDao{
 		String sql = "select * from TBL_TOPIC";
 		List<Topic> lt = new ArrayList<Topic>();
 		PreparedStatement ps = this.preStmt(sql);
-		//bd.execQ(ps);
 		ResultSet rs = ps.executeQuery();
 		while (rs.next()) {
 			Topic topic = new Topic();
@@ -60,7 +59,7 @@ public class TopicDaoImpl extends BaseDao implements TopicDao{
 		ps.setInt(6, topic.getUserId());
 		ps.setInt(7, topic.getBoardId());
 		
-		return this.execQ(ps);
+		return this.execUpd(ps);
 	}
 
 	@Override

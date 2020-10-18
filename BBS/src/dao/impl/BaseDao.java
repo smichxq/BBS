@@ -4,6 +4,7 @@ package dao.impl;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -14,8 +15,6 @@ import java.sql.Statement;
 
 public class BaseDao {
 	static Connection connection = null;
-	
-	static PreparedStatement preStmt= null;
 	
 	static String mySQLDriverName = "com.mysql.cj.jdbc.Driver";
 	
@@ -66,7 +65,7 @@ public class BaseDao {
 	}
 	
 	/**
-	 * 返回一个Statment
+	 * 返回一个PreparedStatment
 	 * @param sql
 	 * @return
 	 * @throws ClassNotFoundException
@@ -76,7 +75,26 @@ public class BaseDao {
 		return connection.prepareStatement(sql);
 	}
 	
-	public int execQ(PreparedStatement pstmt) throws SQLException {
+	
+	
+	/**
+	 * 执行select语句
+	 * @param pstmt
+	 * @return
+	 * @throws SQLException
+	 */
+	public ResultSet execQue(PreparedStatement pstmt) throws SQLException {
+		return pstmt.executeQuery();
+	}
+	
+	
+	/**
+	 * 执行insert语句,返回影响行数 
+	 * @param pstmt
+	 * @return
+	 * @throws SQLException
+	 */
+	public int execUpd(PreparedStatement pstmt) throws SQLException {
 		return pstmt.executeUpdate();
 	}
 	

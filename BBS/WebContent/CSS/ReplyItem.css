@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+.reply{
+	position:relative;
+     width: 1145px;
+     height: 180px;
+     background-color: #d3d7cf;
+     left:50%;
+     top:65px;
+     transform: translate(-50%,0%);
+     
+}
+.user{
+	position:relative;
+	width:10%;
+	height:10%;
+	left:-28%;
+	top:30%;
+	
+}
+#inner-L{
+	position:relative;
+	width:20%;
+	left:1%;
+	top:1%;
+	height:90%;
+	background-color:#d3d7cf;
+}
+#img{
+	position:relative;
+	border-radius: 8px;
+	left:10%;
+	top:10%;
+	
+}
+#inner-M{
+	position:relative;
+	width:60%;
+	left:22%;
+	top:-89%;
+	height:90%;
+	background-color:#d3d7cf;
+}
+#inner-R{
+	position:relative;
+	width:15%;
+	height:9%;
+	left:84%;
+	top:-110%;
+}
+.time{
+	position:relative;
+	left:10%;
+	top:-10%;
+	width:80%;
+}

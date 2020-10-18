@@ -9,7 +9,9 @@
 </head>
 <body>
 <!-- 主题框架 -->
+
 <div class="d1-board">
+
 <!-- 回复数 -->
 	<div class="d1-replyCount">
 	
@@ -22,7 +24,7 @@
 	<!-- 主题内容 -->
 	<div class="d1-topic-container">
 		<div class="topic">
-		Test!1
+		<a href="ReplyBoard.jsp">Test!</a>
 		</div>
 	
 	</div>
@@ -46,10 +48,6 @@
 		<div class = "d2-reply-date">
 		</div>
 </div>
-
-
-
-
 
 </body>
 </html>

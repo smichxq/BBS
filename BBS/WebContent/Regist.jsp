@@ -6,6 +6,17 @@
 <meta charset="UTF-8">
 <link href="CSS/Login.css" type="text/css" rel="stylesheet"/>
 <title>Reg</title>
+<script>
+	function check(){
+		var accc = document.login.acc.value;
+		var pwdd = document.login.pwd.value;
+		if(accc=="" || pwdd ==""){
+			alert("Password or userName is NULL! ");
+			return false;
+		}
+		return true;
+	}
+</script>
 </head>
 <body>
 <%@ include file = "Head.jsp" %>
