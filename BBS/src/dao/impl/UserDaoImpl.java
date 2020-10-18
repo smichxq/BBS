@@ -12,32 +12,46 @@ import dao.UserDao;
 import entity.User;
 
 public class UserDaoImpl extends BaseDao implements UserDao {
+
 	
 	public UserDaoImpl() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public User findUser(String userName) throws ClassNotFoundException, SQLException {
+	public User findUser(String userName){
 		String sql = "select * from TBL_USER";
+		ResultSet rs = null;
+		PreparedStatement ps = null;
 		//子类继承父类所有方法,使用this来使用
 		//如果是子类方法与父类方法重名（方法重写）使用super来调同名父类方法
-		PreparedStatement ps = this.preStmt(sql);
-		ResultSet rs = ps.executeQuery();
+		try {
+			ps = this.preStmt(sql);
+			rs = ps.executeQuery();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		User user = null;
-		while (rs.next()) {
-			if(rs.getString("userName").equalsIgnoreCase(userName)) {
-				user = new User();
-				user.setGender(rs.getInt("gender"));
-				user.setHead(rs.getString("head"));
-				Timestamp stmp = rs.getTimestamp("regTime");
-				user.setRegTime(stmp);
-				user.setUserId(rs.getInt("userId"));
-				user.setUserName(rs.getString("userName"));
-				user.setUserPass(rs.getString("userPass"));
-				return user;
+		try {
+			while (rs.next()) {
+				if(rs.getString("userName").equals(userName)) {
+					user = new User();
+					user.setGender(rs.getInt("gender"));
+					user.setHead(rs.getString("head"));
+					Timestamp stmp = rs.getTimestamp("regTime");
+					user.setRegTime(stmp);
+					user.setUserId(rs.getInt("userId"));
+					user.setUserName(rs.getString("userName"));
+					user.setUserPass(rs.getString("userPass"));
+					return user;
+				}
+				
 			}
-			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return null;
 	}

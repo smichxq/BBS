@@ -1,5 +1,6 @@
 package dao.impl;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -16,29 +17,38 @@ import entity.User;
 public class Test {
 
 	public static void main(String[] args) {
+		
+		BaseDao bdBaseDao = new BaseDao();
+		Connection connection = bdBaseDao.getConnection();
+		try {
+			connection.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		Date utilDate = new Date();
 //		
 //		DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
 //
-		User u1 = new User();
-		
-		u1.setGender(UserDao.FEMALE);
-		u1.setHead("01xaa");
-		u1.setUserId(1234);
-		u1.setUserName("s1mithxq");
-		u1.setUserPass("p1asswd");
+//		User u1 = new User();
+//		
+//		u1.setGender(UserDao.FEMALE);
+//		u1.setHead("01xaa");
+//		u1.setUserId(1234);
+//		u1.setUserName("s1mithxq");
+//		u1.setUserPass("p1asswd");
 //		System.out.println(dateFormat.format(u1.getRegTime()));
 //		
-		UserDaoImpl userDaoImpl = new UserDaoImpl();
-		
-		try {
-			
-			System.out.println(userDaoImpl.updateUser(u1));
-			
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		UserDaoImpl userDaoImpl = new UserDaoImpl();
+//		
+//		try {
+//			
+//			System.out.println(userDaoImpl.updateUser(u1));
+//			
+//		} catch (ClassNotFoundException | SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 //		User user = userDaoImpl.findUser(1234);
 //		

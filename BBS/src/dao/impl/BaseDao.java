@@ -16,15 +16,16 @@ import java.sql.Statement;
 public class BaseDao {
 	static Connection connection = null;
 	
-	static String mySQLDriverName = "com.mysql.cj.jdbc.Driver";
+	public String mySQLDriverName = "com.mysql.cj.jdbc.Driver";
 	
 	static String urlMySQL = "jdbc:mysql://localhost:3306/";
 	
-	static String dataBase = "BBS";
+	static String dataBase = "BBS?&useSSL=false&serverTimezone=UTC";
 	
 	static String userName = "root";
 	
 	static String passWd = "123";
+	
 	
 	/**
 	 * @return Connection
@@ -64,6 +65,7 @@ public class BaseDao {
 		return count;
 	}
 	
+	
 	/**
 	 * 返回一个PreparedStatment
 	 * @param sql
@@ -72,7 +74,7 @@ public class BaseDao {
 	 * @throws SQLException
 	 */
 	public PreparedStatement preStmt(String sql) throws ClassNotFoundException, SQLException {
-		return connection.prepareStatement(sql);
+		return this.connection.prepareStatement(sql);
 	}
 	
 	

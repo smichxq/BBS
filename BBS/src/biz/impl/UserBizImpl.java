@@ -14,13 +14,15 @@ import entity.User;
 public class UserBizImpl extends UserDaoImpl implements UserBiz {
 
 	@Override
-	public User findUser(String userName) throws ClassNotFoundException, SQLException {
+	public User findUser(String userName) {
 		return super.findUser(userName);
 	}
 
 	@Override
-	public User findUser(int UserId) throws ClassNotFoundException, SQLException {
-		return super.findUser(UserId);
+	public User findUser(int userId){
+		return null;
+
+		
 	}
 
 	@Override
