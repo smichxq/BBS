@@ -26,6 +26,6 @@
 	}
 
 </script>
-
+<jsp:include page = "PageNext.jsp" />
 </body>
 </html>

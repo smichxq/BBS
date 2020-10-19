@@ -4,14 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="CSS/PageNext.css" type="text/css" rel="stylesheet"/>
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file = "Head.jsp" %>
-<%for(int i = 0; i<10; i++){ %>
-	<%@ include file = "Board.jsp" %>
-	<br>
-	<%} %>
-<jsp:include page = "PageNext.jsp" />
+<div id="page-content">
+<a href="index.jsp" class="page">下一页</a>
+<a href="index.jsp" class="page">上一页</a>
+</div>
 </body>
 </html>

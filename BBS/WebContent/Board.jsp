@@ -48,6 +48,5 @@
 		<div class = "d2-reply-date">
 		</div>
 </div>
-
 </body>
 </html>

@@ -31,9 +31,12 @@
 
 			</div>
 			</button>
-		<div class="d2-head">
+		<button class="d2-head1">其他
+		<div class="drop-content">
 			<a href="index.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal; font-size: 16px;">其他</a>
-
+			<a href="index.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal; font-size: 16px;">其他</a>
+			<a href="index.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal; font-size: 16px;">其他</a>
+			<a href="index.jsp" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal; font-size: 16px;">其他</a>
 	</div>
     
 </div>
@@ -41,6 +44,7 @@
 	<a id="a1-head" href="Login.jsp">登录</a>
 	<a id="a2-head" href="Regist.jsp">注册</a>
 	</div>
+
 
 </body>
 </html>

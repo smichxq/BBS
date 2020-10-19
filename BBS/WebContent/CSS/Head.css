@@ -3,7 +3,10 @@
 	position:relative;
 	top:20px;
 	left:1%;
-	background-color:#eeeeec;
+	/*background: linear-gradient(0deg,#cce0f2 ,#e1edf7);*/
+	background: linear-gradient(0deg,#cbd3d6 ,#e9eff2);
+	
+
 	width:720px;
 	height:84px;
 	left:50%;		
@@ -16,7 +19,6 @@
 
 #d1-title{
 	position:relative;
-	background:#eeeeec;
 	width:9%;
 	height:75%;
 	top:-5%;
@@ -28,7 +30,7 @@
 	align-items:center;
     justify-content:space-around;
 	position:relative;
-	background-color:#eeeeec;
+	background: linear-gradient(0deg,#dce8ed ,#eaeced);
 	width:60%;
 	height:40px	;
 	top:80px;
@@ -43,14 +45,13 @@
 
 .d4-head{
 	position:relative;
-	background:#eeeeec;
 	width:4%;
 	height:2%;
 	top:-15%;
 	left:90%;
 }
 .d2-head1{
-	background-color:#729fcf !important;
+    background: linear-gradient(0deg,#a1d6f0 ,#93c4db) !important;
 	color:white !important;
 	width:60px !important;
 	height:40px !important;

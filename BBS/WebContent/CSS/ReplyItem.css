@@ -4,7 +4,7 @@
 	position:relative;
      width: 1145px;
      height: 180px;
-     background-color: #d3d7cf;
+	background: linear-gradient(0deg,#edf2f5 ,#f5f6f7 60%,#edf2f5 );
      left:50%;
      top:65px;
      transform: translate(-50%,0%);
@@ -24,7 +24,6 @@
 	left:1%;
 	top:1%;
 	height:90%;
-	background-color:#d3d7cf;
 }
 #img{
 	position:relative;
@@ -39,7 +38,6 @@
 	left:22%;
 	top:-89%;
 	height:90%;
-	background-color:#d3d7cf;
 }
 #inner-R{
 	position:relative;

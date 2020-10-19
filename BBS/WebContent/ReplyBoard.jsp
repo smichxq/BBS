@@ -12,12 +12,7 @@
 <%@ include file = "ReplyItem.jsp" %>
 	<br>
 	<%} %>
-
-<div id="next">
-<a href="index.jsp">next page</a>
-<a href="index.jsp">last page</a>
-</div>
-
+<jsp:include page = "PageNext.jsp" />
 
 
 </body>

@@ -13,6 +13,7 @@
 	<%@ include file = "Board.jsp" %>
 	<br>
 	<%} %>
-
+	
+<jsp:include page = "PageNext.jsp" />
 </body>
 </html>

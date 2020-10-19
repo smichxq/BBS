@@ -10,13 +10,13 @@ public interface UserBiz {
 	 * @param UserName
 	 * @return
 	 */
-	public User findUser(String userName);
+	public User findUser(String userName)throws ClassNotFoundException, SQLException;
 	/**
 	 * 根据用户id查找User对象
 	 * @param UserId
 	 * @return
 	 */
-	public User findUser(int userId);
+	public User findUser(int userId)throws ClassNotFoundException, SQLException;
 	/**
 	 * 增加一个用户
 	 * @param user

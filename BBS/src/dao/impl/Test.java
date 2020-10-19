@@ -18,14 +18,14 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		BaseDao bdBaseDao = new BaseDao();
-		Connection connection = bdBaseDao.getConnection();
-		try {
-			connection.createStatement();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		BaseDao bdBaseDao = new BaseDao();
+//		Connection connection = bdBaseDao.getConnection();
+//		try {
+//			connection.createStatement();
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		Date utilDate = new Date();
 //		
 //		DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");

@@ -1,4 +1,8 @@
-
+<%@page import="java.util.Date"%>
+<%@page import="java.text.*"%>
+<%@page import="java.util.*"%>
+<%@page import="dao.UserDao"%>
+<%@page import="biz.UserBiz"%>
 <%@page import="biz.impl.UserBizImpl"%>
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -10,11 +14,13 @@
 <title>Login</title>
 </head>
 <%!
-String acc = null;
+String idLogin = null;
+String pwLogin =null;
 
-String pw =null;
+String idRegist = null;
+String pwRegist = null;
 
-BaseDao bd = null;
+UserBiz ub = null;
 
 Statement ps = null;
 
@@ -24,22 +30,47 @@ String string = null;
 
 User user = null;
 
+Date date = null;
+
+DateFormat dateFormat = null;
+
 %>
 <%
+	idLogin = request.getParameter("idLogin");
+	pwLogin = request.getParameter("pwLogin");
+	
+	idRegist = request.getParameter("idRegist");
+	pwRegist = request.getParameter("pwRegist");
+
+	ub = new UserBizImpl();
+	
+	//如果是注册页面,那么idLogin与pwLogin就不会被传也就是null
+	if(idLogin==null){
+		//检查注册id合法性
+		user = ub.findUser(idRegist);
+		//合法（没找到）
+		if(user==null){
+			user = new User();
+			date = new Date();
+			dateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+			user.setUserId(Integer.parseInt(idRegist));
+			user.setUserPass(pwRegist);
+			user.setUserName("sss");
+			user.setHead("0x11");
+			user.setGender(UserDao.FEMALE);
+			user.setRegTime(date);
+		}
+	}
+	
 	
 
-	acc = request.getParameter("acc");
-	pw = request.getParameter("pwd");
-	UserBizImpl ubi = new UserBizImpl();
-	user = ubi.findUser(acc);
-	string = user.getUserPass();
 
-	if(user.getUserPass().equalsIgnoreCase(pw))
+	if(true)
 
 	{ %>
 	
 		<jsp:forward page = "Success.jsp">
-			<jsp:param value="<%= acc %>" name="accc"></jsp:param>
+			<jsp:param value="<%= idLogin %>" name="accc"></jsp:param>
 			</jsp:forward>
 		
 	<%} else{ %>

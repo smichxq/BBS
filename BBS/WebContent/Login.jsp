@@ -24,9 +24,9 @@
 		<div class="d2-container">
 			<form class="d1-inner-form-container" name="login" method="post" onSubmit="return check()" action="Check.jsp">
 				<p id="us">用户名</p>
-                <input id="input-item-us" type="text" name="acc">
+                <input id="input-item-us" type="text" name="idLogin">
 				<p id="pw">密码</p>
-				<input id="input-item-pw" type="password" name="pwd">
+				<input id="input-item-pw" type="password" name="pwLogin">
 				
 				<input id="sub" type="submit" name="submit" value="登录">
 				<input id="res" type="reset" name="reset" value="清除">

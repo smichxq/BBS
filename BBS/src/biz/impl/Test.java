@@ -10,23 +10,23 @@ import dao.UserDao;
 import entity.User;
 
 public class Test {
-	public static void main(String[] args) {
-		UserBiz userBiz = new UserBizImpl();
-		Date utilDate = new Date();
+//	public static void main(String[] args) {
+//		UserBiz userBiz = new UserBizImpl();
+//		Date utilDate = new Date();
+//		
+//		DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+//		User user = userBiz.findUser("My");
+//		if (user.getUserName().equalsIgnoreCase("My")) {
+//			System.out.println(user.getUserName());
+//		}
+//		else {
+//			System.out.println("wrong!");
+//		}
+//		
+//		
 		
-		DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
-		User user = userBiz.findUser("My");
-		if (user.getUserName().equalsIgnoreCase("My")) {
-			System.out.println(user.getUserName());
-		}
-		else {
-			System.out.println("wrong!");
-		}
 		
-		
-		
-		
-	}
+//	}
 }
 
 

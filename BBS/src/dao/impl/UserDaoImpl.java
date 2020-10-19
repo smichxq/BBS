@@ -19,7 +19,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 	}
 
 	@Override
-	public User findUser(String userName){
+	public User findUser(String userName) throws ClassNotFoundException, SQLException{
 		String sql = "select * from TBL_USER";
 		ResultSet rs = null;
 		PreparedStatement ps = null;
