@@ -8,8 +8,8 @@
 <title>Reg</title>
 <script>
 	function check(){
-		var accc = document.login.acc.value;
-		var pwdd = document.login.pwd.value;
+		var accc = document.login.idRegist.value;
+		var pwdd = document.login.pwRegist.value;
 		if(accc=="" || pwdd ==""){
 			alert("Password or userName is NULL! ");
 			return false;
@@ -25,6 +25,12 @@
                 <form class="d1-inner-form-container" name="login" method="post" onSubmit="return check()" action="Check.jsp">
                     <p id="us">用户名</p>
                     <input id="input-item-us" type="text" name="idRegist">
+                    
+                    <p id="pw">密码</p>
+                    <input id="input-item-pw" type="password" name="pwRegist">
+                    
+                    <p id="pw">密码</p>
+                    <input id="input-item-pw" type="password" name="pwRegist">
                     
                     <p id="pw">密码</p>
                     <input id="input-item-pw" type="password" name="pwRegist">

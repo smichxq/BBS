@@ -1,18 +1,18 @@
-<%@page import="entity.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page import="entity.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Success</title>
+<title>please retry!</title>
 </head>
 <body>
-<%
-	User user = (User)session.getAttribute("user");
-%>
-<h1>Success!</h1>
-<h1>Welcome: <%=user.toString()%></h1>
+
+<h1>UserName or PassWord is wrong!</h1>
+<h1>plz try again!</h1>
+
+
 
 </body>
 </html>

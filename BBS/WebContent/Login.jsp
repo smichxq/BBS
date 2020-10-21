@@ -8,9 +8,9 @@
 <title>login</title>
 <script>
 	function check(){
-		var accc = document.login.acc.value;
-		var pwdd = document.login.pwd.value;
-		if(accc=="" || pwdd ==""){
+		var id = document.login.idLogin.value;
+		var pw = document.login.pwLogin.value;
+		if(id=="" || pw==""){
 			alert("Password or userName is NULL! ");
 			return false;
 		}

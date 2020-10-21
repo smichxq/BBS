@@ -20,7 +20,7 @@ public class BaseDao {
 	
 	static String urlMySQL = "jdbc:mysql://localhost:3306/";
 	
-	static String dataBase = "BBS?&useSSL=false&serverTimezone=UTC";
+	static String dataBase = "BBS";
 	
 	static String userName = "root";
 	
