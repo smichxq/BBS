@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    isErrorPage="true"%>
     <%@page import="entity.*"%>
 <!DOCTYPE html>
 <html>
@@ -8,11 +9,7 @@
 <title>please retry!</title>
 </head>
 <body>
-
-<h1>UserName or PassWord is wrong!</h1>
+<h1>accpunt or password has some problem</h1>
 <h1>plz try again!</h1>
-
-
-
 </body>
 </html>

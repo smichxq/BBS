@@ -11,12 +11,29 @@ import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 import org.omg.CORBA.PUBLIC_MEMBER;
 
 import dao.UserDao;
+import entity.Board;
 import entity.Topic;
 import entity.User;
 
 public class Test {
 
 	public static void main(String[] args) {
+//		BoardDaoImpl bd = new BoardDaoImpl();
+//		Board board = bd.findBoard(3);
+//		System.out.println(board.toString());
+//		
+//		Map<Board, Board> map = bd.findBoard();
+//		for (Board board : map.keySet()) {
+//			if (map.get(board)!=null) {
+//				System.out.println("父板块： " +  map.get(board).toString() +  " 子板块  : " + board.toString());
+//				
+//			}
+//			
+//
+//		}
+		
+
+
 		
 //		BaseDao bdBaseDao = new BaseDao();
 //		Connection connection = bdBaseDao.getConnection();

@@ -29,12 +29,6 @@
                     <p id="pw">密码</p>
                     <input id="input-item-pw" type="password" name="pwRegist">
                     
-                    <p id="pw">密码</p>
-                    <input id="input-item-pw" type="password" name="pwRegist">
-                    
-                    <p id="pw">密码</p>
-                    <input id="input-item-pw" type="password" name="pwRegist">
-                    
                     <input id="sub" type="submit" name="submit" value="注册">
                     <input id="res" type="reset" name="reset" value="清除">
                 </form>

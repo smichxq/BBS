@@ -2,7 +2,7 @@ package entity;
 public class Board {
 	private int boardId;
 	private String boardName;
-	private int parentName;
+	private int parentId;
 
 	public int getBoardId() {
 		return boardId;
@@ -20,12 +20,17 @@ public class Board {
 		this.boardName = boardName;
 	}
 
-	public int getParentName() {
-		return parentName;
+	public int getParentId() {
+		return parentId;
 	}
 
-	public void setParentName(int parentName) {
-		this.parentName = parentName;
+	public void setParentId(int parentId) {
+		this.parentId = parentId;
+	}
+	@Override
+	public String toString() {
+		return this.boardId + " " + this.boardName + " " + this.parentId;
+//		return this.boardName;
 	}
 
 }

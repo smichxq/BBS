@@ -47,7 +47,7 @@
 
 	<%if(idLogin==null){%>
 		<!-- 检查注册id合法性 -->
-		<% user = ub.findUser(idRegist);%>
+		<% user = ub.findUser(Integer.parseInt(idRegist));%>
 		<!--  合法（没找到）-->
 		
 		<%if(user==null){ %>
@@ -57,26 +57,22 @@
 			date = new Date();
 			user.setUserId(Integer.parseInt(idRegist));
 			user.setUserPass(pwRegist);
-			user.setUserName("sxsss");
-			user.setHead("0x11");
-			user.setGender(UserDao.FEMALE);
 			user.setRegTime(date);
-			ub.addUser(user);
 		
 			session.setAttribute("user", user);
 		%>
-			<jsp:forward page="Success.jsp"></jsp:forward>	
+			<jsp:forward page="User.jsp"></jsp:forward>	
 	<!-- 注册id不合法（已存在） -->
 	<%}else{ %>
 					
-					<jsp:forward page = "ReTry.jsp"/>
+					<jsp:forward page = "Retry.jsp"/>
 					
 			<%} %>
 			
 <!-- 如果是登陆 -->
 <%}else{ %>
 <!-- 核对账号 密码 -->
-		<%user = ub.findUser(idLogin); %>
+		<%user = ub.findUser(Integer.parseInt(idLogin));%>
 		<%if(user != null && user.getUserPass().equals(pwLogin)){ %>	
 							<%session.setAttribute("user", user); %>
 							<jsp:forward page="Success.jsp" ></jsp:forward>
