@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.List;
 import java.util.Map;
 
 import entity.Board;
@@ -11,7 +12,7 @@ public interface BoardDao {
 	 * value是子板块
 	 * @return
 	 */
-	public Map<Board, Board> findBoard();
+	public Map<List, List> findBoard();
 	
 	/**
 	 * 根据Id查找板块

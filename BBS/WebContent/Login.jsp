@@ -27,7 +27,7 @@
                 <input id="input-item-us" type="text" name="idLogin">
 				<p id="pw">密码</p>
 				<input id="input-item-pw" type="password" name="pwLogin">
-				
+	
 				<input id="sub" type="submit" name="submit" value="登录">
 				<input id="res" type="reset" name="reset" value="清除">
 			</form>

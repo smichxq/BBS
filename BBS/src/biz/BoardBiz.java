@@ -1,5 +1,7 @@
 package biz;
 import entity.Board;
+
+import java.util.List;
 import java.util.Map;
 
 public interface BoardBiz {
@@ -10,7 +12,7 @@ public interface BoardBiz {
 	 * value为父板块
 	 * @return
 	 */
-	public Map<Board,Board> findBoard();
+	public Map<List,List> findBoard();
 	
 	/**
 	 * 根据boardId查找板块

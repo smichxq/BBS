@@ -17,8 +17,10 @@ import entity.Board;
 public class BoardDaoImpl extends BaseDao implements BoardDao {
 
 	@Override
-	public Map<Board, Board> findBoard() {
-		Map<Board, Board> boardMap  = new HashMap<Board, Board>();
+	public Map<List, List> findBoard() {
+		Map<List, List> boardMap  = new HashMap<List, List>();
+		List< Board> fBoardsList = new ArrayList<Board>();
+		List<Board> cBoardsList = new ArrayList<Board>();
 		
 //		List<Board> boardList = new ArrayList<Board>();
 //		Iterator<Board> listIterator = boardList.listIterator();
@@ -35,57 +37,71 @@ public class BoardDaoImpl extends BaseDao implements BoardDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try {
-			while (rs.next()) {
-				if(rs.getInt("parentId")==0) {
+//		try {
+			try {
+				while (rs.next()) {
 					
 					board = new Board();
 					board.setBoardId(rs.getInt("boardId"));
 					board.setBoardName(rs.getString("boardName"));
 					board.setParentId(rs.getInt("parentId"));
-					boardMap.put(board, null);
-					//boardList.add(board);
-					continue;
-				}
-				
-				board = new Board();
-				board.setBoardId(rs.getInt("boardId"));
-				board.setBoardName(rs.getString("boardName"));
-				board.setParentId(rs.getInt("parentId"));
-				//每次取回一个子板块都要与父版块联系
-				for (Board board2 : boardMap.keySet()) {
-					//不是父板块直接下一轮循环
-					if (board2.getParentId()!=0) {
-						continue;
+					
+					if(rs.getInt("parentId")==0) {				
+						fBoardsList.add(board);
 					}
-					if (board2.getBoardId() == board.getParentId()) {
-						boardMap.put(board, board2);
-						break;
+					else {
+						cBoardsList.add(board);
 					}
-				}
-				
-/*----------------------------------------------------------------list线程异常--------------------------------------------------------------*/
-//				while (listIterator.hasNext()) {
-//					//从ArrayList取得父板块
-//					
-//					//Board parentsBoard = (Board) listIterator.next();
-//					//联系判断
-//					if (parentsBoard.getBoardId()==board.getParentId()) {
-//						boardMap.put(board, parentsBoard);
+/*----------------------------------------------------------------只返回Map<Board,Board>--------------------------------------------------------------*/
+//				
+//				board = new Board();
+//				board.setBoardId(rs.getInt("boardId"));
+//				board.setBoardName(rs.getString("boardName"));
+//				board.setParentId(rs.getInt("parentId"));
+//				//每次取回一个子板块都要与父版块联系
+//				for (Board board2 : boardMap.keySet()) {
+//					//不是父板块直接下一轮循环
+//					if (board2.getParentId()!=0) {
+//						continue;
+//					}
+//					if (board2.getBoardId() == board.getParentId()) {
+//						boardMap.put(board, board2);
 //						break;
 //					}
 //				}
-/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+//				
+///*----------------------------------------------------------------list线程异常--------------------------------------------------------------*/
+////				while (listIterator.hasNext()) {
+////					//从ArrayList取得父板块
+////					
+////					//Board parentsBoard = (Board) listIterator.next();
+////					//联系判断
+////					if (parentsBoard.getBoardId()==board.getParentId()) {
+////						boardMap.put(board, parentsBoard);
+////						break;
+////					}
+////				}
+///*----------------------------------------------------------------list线程异常------------------------------------------------------------------*/
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+					
+/*----------------------------------------------------------------只返回Map<Board,Board>--------------------------------------------------------------*/
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+			
+			
+		boardMap.put(fBoardsList, cBoardsList);
 		
 		
 		return boardMap;
 	}
+		
 
 	@Override
 	public Board findBoard(int boardId) {

@@ -18,10 +18,28 @@ import entity.User;
 public class Test {
 
 	public static void main(String[] args) {
-//		BoardDaoImpl bd = new BoardDaoImpl();
-//		Board board = bd.findBoard(3);
-//		System.out.println(board.toString());
-//		
+		
+		BoardDaoImpl bd = new BoardDaoImpl();
+		Map<List, List> map = bd.findBoard();
+		List<Board> fBoardslList = null;
+		List<Board> cBoardslList = null;
+		
+		
+		for (List<Board> fBoard : map.keySet()) {
+			fBoardslList = fBoard;
+			cBoardslList = map.get(fBoard);
+		}
+		
+		for (int i = 0; i < fBoardslList.size(); i++) {
+			System.out.println("夫版块   " + fBoardslList.get(i).toString());
+			for (int j = 0; j < cBoardslList.size(); j++) {
+				if (fBoardslList.get(i).getBoardId() == cBoardslList.get(j).getParentId()) {
+					System.out.println(cBoardslList.get(j).toString());
+				}
+			}
+		}
+
+		
 //		Map<Board, Board> map = bd.findBoard();
 //		for (Board board : map.keySet()) {
 //			if (map.get(board)!=null) {

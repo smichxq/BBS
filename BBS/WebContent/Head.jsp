@@ -10,7 +10,7 @@
 <link href="CSS/Head.css" type="text/css" rel="stylesheet"/>
 <title>Insert title here</title>
 </head>
-<%@include file = "HeadNavigator.jsp" %> 
+<%@include file = "HeadNavigator-Demo.jsp" %> 
 
 
 
