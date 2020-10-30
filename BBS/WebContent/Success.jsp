@@ -10,6 +10,7 @@
 <body>
 <%
 	User user = (User)session.getAttribute("user");
+	session.setAttribute("loginUser", user);
 %>
 <h1>Success!</h1>
 <h1>Welcome: <%=user.toString()%></h1>

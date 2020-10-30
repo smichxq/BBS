@@ -100,6 +100,14 @@ public class BaseDao {
 		return pstmt.executeUpdate();
 	}
 	
+	/**
+	 * 关闭所有连接
+	 * 
+	 */
+	public void close() {
+		
+	}
+	
 
 	
 	

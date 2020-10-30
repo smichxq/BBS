@@ -35,9 +35,9 @@ String gender = smartUpload.getRequest().getParameter("Sex");
 //SU包的File类接收上传的文件
 com.jspsmart.upload.File file = smartUpload.getFiles().getFile(0);
 //得到文件名字
-String fileName = file.getFileName();
+String fileName = userName;
 //存储全路径
-String path = "img/" + fileName;
+String path = "img/" + userName;
 //存储
 file.saveAs(path, SmartUpload.SAVE_VIRTUAL);
 user.setGender(Integer.parseInt(gender));

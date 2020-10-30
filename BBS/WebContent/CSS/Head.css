@@ -45,10 +45,10 @@
 
 .d4-head{
 	position:relative;
-	width:4%;
-	height:2%;
-	top:-15%;
-	left:90%;
+	width:82px ;
+	height:25px ;
+	top:-120px ;
+	left:95% ;
 }
 .d2-head1{
     background: linear-gradient(0deg,#a1d6f0 ,#93c4db) !important;

@@ -1,3 +1,9 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="biz.impl.UserBizImpl"%>
+<%@page import="entity.User"%>
+<%@page import="entity.Topic"%>
+<%@page import="biz.impl.TopicBizImpl"%>
+<%@page import="biz.TopicBiz"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,6 +13,16 @@
 <meta charset="UTF-8">
 <title>BBS</title>
 </head>
+<%
+	Topic topic = null;
+	TopicBiz topicBiz = new TopicBizImpl();
+	topic = topicBiz.findTopic(1);
+	User boardUser = null;
+	UserBizImpl userBizImpl = new UserBizImpl();
+	boardUser = userBizImpl.findUser(topic.getUserId());
+	//SimpleDateFormat date = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+	
+%>
 <body>
 <!-- 主题框架 -->
 
@@ -24,7 +40,7 @@
 	<!-- 主题内容 -->
 	<div class="d1-topic-container">
 		<div class="topic">
-		<a href="ReplyBoard.jsp">Test!</a>
+		<a href="ReplyBoard.jsp"><%=topic.getTitle() %></a>
 		</div>
 	
 	</div>
@@ -34,18 +50,17 @@
 		
 		<!-- 楼主-->
 		<div class = "d2-master">
-		smithxq
+		<%=boardUser.getUserName() %>
 		</div>
-		<!-- 发布时间 -->
-		<div class = "d2-master-date">
-		</div>
+
 		
 		<!-- 最后回贴-->
 		<div class = "d2-reply">
-		2020.10.16		
+		<%=topic.getModifyTime()%>
 		</div>
 		<!-- 回贴时间 -->
 		<div class = "d2-reply-date">
+		
 		</div>
 </div>
 </body>

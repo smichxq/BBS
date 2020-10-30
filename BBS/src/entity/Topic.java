@@ -12,7 +12,7 @@ public class Topic {
 	private int boardId;
 
 	public int getTopicId() {
-		return topicId;
+		return this.topicId;
 	}
 
 	public void setTopicId(int topicId) {
@@ -20,7 +20,7 @@ public class Topic {
 	}
 
 	public String getTitle() {
-		return title;
+		return this.title;
 	}
 
 	public void setTitle(String title) {
@@ -28,7 +28,7 @@ public class Topic {
 	}
 
 	public String getContent() {
-		return content;
+		return this.content;
 	}
 
 	public void setContent(String content) {
@@ -52,7 +52,7 @@ public class Topic {
 	}
 
 	public int getUserId() {
-		return userId;
+		return this.userId;
 	}
 
 	public void setUserId(int userId) {
@@ -60,7 +60,7 @@ public class Topic {
 	}
 
 	public int getBoardId() {
-		return boardId;
+		return this.boardId;
 	}
 
 	public void setBoardId(int boardId) {

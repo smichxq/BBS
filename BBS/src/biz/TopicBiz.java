@@ -1,11 +1,10 @@
-package dao;
-
+package biz;
 import java.sql.SQLException;
 import java.util.List;
 
 import entity.Topic;
 
-public interface TopicDao {
+public interface TopicBiz {
 	/**
 	 * 根据主题id查找主题
 	 * @return
@@ -51,3 +50,5 @@ public interface TopicDao {
 	 */
 	public int deleteTopic(Topic topic) throws ClassNotFoundException, SQLException;
 }
+
+

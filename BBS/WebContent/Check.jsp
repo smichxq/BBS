@@ -61,7 +61,7 @@
 		
 			session.setAttribute("user", user);
 		%>
-			<jsp:forward page="User.jsp"></jsp:forward>	
+			<jsp:forward page="Upload.jsp"></jsp:forward>	
 	<!-- 注册id不合法（已存在） -->
 	<%}else{ %>
 					
