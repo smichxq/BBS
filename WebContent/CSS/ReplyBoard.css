@@ -1,0 +1,11 @@
+#next{
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #f5f6f2;
+	width: 40px;
+	height: 20px;
+	top:1px;
+	left: 22px;
+
+}
