@@ -21,7 +21,7 @@ public class TopicBizImpl extends TopicDaoImpl implements TopicBiz {
 		
 	}
 	public int addTopic(Topic topic) throws ClassNotFoundException, SQLException{
-		return 0;
+		return 1;
 		
 	}
 	
