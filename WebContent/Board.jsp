@@ -16,7 +16,13 @@
 <%
 	Topic topic = null;
 	TopicBiz topicBiz = new TopicBizImpl();
-	topic = topicBiz.findTopic(1);
+	
+
+	topic = topicBiz.findTopic((int)request.getAttribute("topicId"));
+		
+
+
+	
 	User boardUser = null;
 	UserBizImpl userBizImpl = new UserBizImpl();
 	boardUser = userBizImpl.findUser(topic.getUserId());

@@ -6,6 +6,11 @@
 <meta charset="UTF-8">
 <link href="CSS/Login.css" type="text/css" rel="stylesheet"/>
 <title>login</title>
+<%
+	User user = null;
+	user = (User)session.getAttribute("loginUser");
+	
+%>
 <script>
 	function check(){
 		var id = document.login.idLogin.value;
@@ -19,6 +24,7 @@
 </script>
 </head>
 <body>
+<%if(user==null){ %>
 <%@ include file = "Head.jsp" %>
 	<div class="d1-container">
 		<div class="d2-container">
@@ -33,6 +39,9 @@
 			</form>
 		</div>
 	</div>
+	<%}else{ %>
+		<jsp:forward page="index.jsp"></jsp:forward>
+		<%} %>
 
 
 </body>

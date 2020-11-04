@@ -8,6 +8,11 @@
 </head>
 <body style="background-color:#ffffff;">
 <jsp:include page = "Head.jsp" />
+<%
+Integer boardId = new Integer(1);
+request.setAttribute("topicId", boardId);
+%>
+
 
 <%for(int i = 0; i<10; i++){ %>
 		<jsp:include page = "Board.jsp" />
@@ -15,17 +20,6 @@
 		<%} %>
 
 
-<script type="text/javascript">
-
-	function add(){
-		var h = document.createElement("hr");
-		var d = document.createTextNode("div");
-		var f = document.getElementById("d5");
-		f.appendChild(h);
-		f.appendChild(d);
-	}
-
-</script>
 <jsp:include page = "PageNext.jsp" />
 </body>
 </html>

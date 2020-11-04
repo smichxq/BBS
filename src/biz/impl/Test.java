@@ -15,39 +15,58 @@ import entity.User;
 
 public class Test {
 public static void main(String[] args) {
-	BoardBiz bdBiz = new BoardBizImpl();
-	Map<List, List> map = bdBiz.findBoard();
-	List<Board> fBoardslList = null;
-	List<Board> cBoardslList = null;
-	int a = 0;
-	int b = 0 ;
-	String style = "font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;";
-	System.out.println("<div id=\"d1-head\">");
-	System.out.println("<h1 id=\"d1-title\">BBS</h1>");
-	System.out.println("</div>");
-	System.out.println("<div class=\"d3-navigate\">");
-	for(List fBoard:map.keySet()) {
-		fBoardslList = fBoard;
-		cBoardslList = map.get(fBoard);
-		
-	}
-	for (int i = 0; i < fBoardslList.size(); i++) {
-		Board fBoard = fBoardslList.get(i);
-		System.out.println("<button class='d2-head1'>" + fBoard.getBoardName());
-		System.out.println("<div class=\"drop-content\">");
-		for (int j = 0; j < cBoardslList.size(); j++) {
-			//a++;
-			Board cBoard = cBoardslList.get(j);
-			if (fBoard.getBoardId() == cBoard.getParentId()) {
-				System.out.println("<a href='JAVA.jsp' " + " style=" + style + ">" +cBoard.getBoardName() + "</a>");
-				//b++;
-			}
-		}
-		System.out.println("</div>");
-		System.out.println("</button>");
-	}
-
+	Date utilDate = new Date();
 	
+	DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+	
+	UserBiz uBiz = new UserBizImpl();
+	User user = new User();
+	user.setGender(1);
+	user.setHead("xxxx");
+	user.setRegTime(utilDate);
+	user.setUserId(98766);
+	user.setUserName("xxxxx");
+	user.setUserPass("123");
+	try {
+		System.out.println(uBiz.addUser(user));
+	} catch (ClassNotFoundException | SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+//	BoardBiz bdBiz = new BoardBizImpl();
+//	Map<List, List> map = bdBiz.findBoard();
+//	List<Board> fBoardslList = null;
+//	List<Board> cBoardslList = null;
+//	int a = 0;
+//	int b = 0 ;
+//	String style = "font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; font-style: normal;";
+//	System.out.println("<div id=\"d1-head\">");
+//	System.out.println("<h1 id=\"d1-title\">BBS</h1>");
+//	System.out.println("</div>");
+//	System.out.println("<div class=\"d3-navigate\">");
+//	for(List fBoard:map.keySet()) {
+//		fBoardslList = fBoard;
+//		cBoardslList = map.get(fBoard);
+//		
+//	}
+//	for (int i = 0; i < fBoardslList.size(); i++) {
+//		Board fBoard = fBoardslList.get(i);
+//		System.out.println("<button class='d2-head1'>" + fBoard.getBoardName());
+//		System.out.println("<div class=\"drop-content\">");
+//		for (int j = 0; j < cBoardslList.size(); j++) {
+//			//a++;
+//			Board cBoard = cBoardslList.get(j);
+//			if (fBoard.getBoardId() == cBoard.getParentId()) {
+//				System.out.println("<a href='JAVA.jsp' " + " style=" + style + ">" +cBoard.getBoardName() + "</a>");
+//				//b++;
+//			}
+//		}
+//		System.out.println("</div>");
+//		System.out.println("</button>");
+//	}
+//
+//	
 	
 	
 //	BoardBiz bdBiz = new BoardBizImpl();
@@ -78,9 +97,7 @@ public static void main(String[] args) {
 
 
 //		UserBiz userBiz = new UserBizImpl();
-//		Date utilDate = new Date();
-//		
-//		DateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+
 //		User user = userBiz.findUser("My");
 //		if (user.getUserName().equalsIgnoreCase("My")) {
 //			System.out.println(user.getUserName());

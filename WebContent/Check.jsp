@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>Login</title>
 </head>
@@ -75,7 +76,7 @@
 		<%user = ub.findUser(Integer.parseInt(idLogin));%>
 		<%if(user != null && user.getUserPass().equals(pwLogin)){ %>	
 							<%session.setAttribute("user", user); %>
-							<jsp:forward page="Success.jsp" ></jsp:forward>
+							<jsp:forward page="User.jsp" ></jsp:forward>
 						<%}else{ %>
 							<jsp:forward page="Retry.jsp" ></jsp:forward>
 							<%} %>

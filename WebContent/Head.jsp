@@ -11,9 +11,8 @@
 <link href="CSS/Head.css" type="text/css" rel="stylesheet"/>
 <title>Insert title here</title>
 <%
-	User headUser = null;
-	headUser = (User)session.getAttribute("loginUser");
-	String src = null;
+	User user1 = null;
+	user1 = (User)session.getAttribute("user");
 %>
 </head>
 <!--  
@@ -36,17 +35,15 @@
 
 
 <div class="d4-head">
-<%if(headUser==null) {%>
+<%if(user1==null) {%>
 	<a id="a1-head" href="Login.jsp">登录</a>
 	<a id="a2-head" href="Regist.jsp">注册</a>
 	
 	<%}else{%>
-	<%out.println("<img src= 'img/" + headUser.getUserName() + "'" + " width='50' " + "height='50' />"); %>
-	<h id="a1-head"><%=headUser.getUserName() %></h>
+	<%out.println("<img src= '../" + user1.getUserName() + ".jpg" + "'" + " width='50' " + "height='50' />"); %>
+	<a href="User.jsp"><%=user1.getUserName() %></h>
 	
 	<%} %>
 </div>
 
 
-</body>
-</html>

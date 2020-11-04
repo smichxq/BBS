@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
+<title>注册</title>
+<link href="CSS/Upload.css" type="text/css" rel="stylesheet"/>
 
 
 
@@ -25,13 +25,15 @@
  比如：apache的fileupload组件,smartupload等。通过这些开源的upload组件提供的API，
  就可以直接从request中取得指定的表单项了。 
  -->
+ <div id = "sign-up">
 <form id="form-file" action="Save.jsp" enctype="multipart/form-data" method="post" >
-	<input type="file" name="img"><br>
+	<input type="file" name="img" value="上传"><br>
 	男<input type="radio" checked="checked" name="Sex" value="1" /><br>
 	女<input type="radio" name="Sex" value="2" /><br>
-	<input type="text" name = "userName"><br>
+	昵称<input type="text" name = "userName"><br>
 	<input type = "submit" value="提交">
 </form>
+</div>
 
 </body>
 </html>

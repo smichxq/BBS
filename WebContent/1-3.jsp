@@ -5,11 +5,16 @@
 <head>
 <meta charset="UTF-8">
 
-<title>JAVA</title>
+<title>JAVA技术</title>
 </head>
 <body>
-<%@ include file = "Head.jsp" %>
+<jsp:include page = "Head.jsp" />
+<%
+	Integer boardId = new Integer(1);
+	request.setAttribute("topicId", boardId);
+%>
 <%for(int i = 0; i<10; i++){ %>
+
 	<%@ include file = "Board.jsp" %>
 	<br>
 	<%} %>

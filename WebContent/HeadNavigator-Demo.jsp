@@ -33,12 +33,12 @@
 %>
 <%for(int i = 0 ; i < fBoardsList.size(); i++){ %>
 <%fBoard = fBoardsList.get(i);%>
-<button class='d2-head1'><%=fBoard.getBoardName() %> 
+<button class='d2-head1'><%=fBoard.getBoardName() %>
 <div class="drop-content">
 <%for(int j = 0 ; j < cBoardsList.size(); j++) {%>
 <%cBoard = cBoardsList.get(j); %>
 <%if(fBoard.getBoardId() == cBoard.getParentId()){ %>
-<%out.println("<a href='JAVA.jsp' " + " style=" + style + ">" +cBoard.getBoardName() + "</a>"); %>
+<%out.println("<a href=" + fBoard.getBoardId() + "-" + cBoard.getBoardId() + ".jsp"  + " style=" + style + ">" +cBoard.getBoardName() + "</a>"); %>
 <%} %>
 <%} %>
 <%

@@ -9,11 +9,11 @@
 </head>
 <body>
 <%
-	User user = (User)session.getAttribute("user");
-	session.setAttribute("loginUser", user);
+	User loginUser = (User)session.getAttribute("savedUser");
+	session.setAttribute("loginUser", loginUser);
 %>
 <h1>Success!</h1>
-<h1>Welcome: <%=user.toString()%></h1>
+<h1>Welcome: <%=loginUser.toString()%></h1>
 
 </body>
 </html>
