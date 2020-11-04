@@ -1,0 +1,25 @@
+.user-container{
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    background: linear-gradient(0deg,#edf2f5 ,#f5f6f7 60%,#edf2f5 );
+    width:30%;
+    height:300px;
+    left:50%;
+    top:300px;
+    border-style:ridge;
+	border-color:#e7e6dc;
+	transform: translate(-50%,-15%);
+
+
+}
+.user-inner{
+	position:relative;
+	width:300px;
+	height:50px;
+	left:20%;
+
+	
+}
