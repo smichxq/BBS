@@ -11,6 +11,7 @@
 <div id="page-content">
 <a href="index.jsp" class="page">下一页</a>
 <a href="index.jsp" class="page">上一页</a>
+<a href="index.jsp" class="page">发帖</a>
 </div>
 </body>
 </html>
